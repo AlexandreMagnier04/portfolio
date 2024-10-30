@@ -52,9 +52,14 @@ nav a:hover{
     transform: scale(1.1);
 } */
 
-img:hover{
+header nav img:hover{
     transform: scale(1.1);
 }
+
+footer img:hover{
+    transform: scale(1.1);
+}
+
 
 footer{
     border-top:2px solid #ffffff;
