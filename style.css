@@ -16,7 +16,6 @@
 body{
     margin: 0;
     padding: 0;
-    
     width: 100%;
     background: linear-gradient(#0f40bb,rgb(0, 0, 0));
     box-sizing: border-box;
@@ -47,10 +46,6 @@ nav a {
 nav a:hover{
     color: #0f40bb;
 }
-
-/* nav img:hover{
-    transform: scale(1.1);
-} */
 
 header nav img:hover{
     transform: scale(1.1);
@@ -84,13 +79,18 @@ p{
 li{
     color: #ffffff;
     font-family:calibri-bold;
+    font-size: 20px;
 }
 .title{
     font-family:baloo; 
     color:#ffffff; 
     font-size: 60px; 
-    display: flex;
-    justify-content: center;
+}
+
+.sub-title{
+    font-family:baloo; 
+    color:#ffffff; 
+    font-size: 40px; 
 }
 
 #separator {
@@ -131,3 +131,21 @@ li{
     gap: 15px;
 }
 
+#index-block1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#index-block2-center{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#index-block3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
