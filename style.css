@@ -129,7 +129,7 @@
 }
 
 .carousel-item img {
-    width: 100%;
+    width: 450px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
@@ -354,6 +354,14 @@ body::before {
     z-index: -1;
     opacity: 0.03;
 }
+
+.screenshots-carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
 
 .code-line {
     position: absolute;
@@ -1248,6 +1256,9 @@ footer {
     margin-bottom: 40px;
 }
 
+.category-header{
+    text-align: center;
+}
 .filter-btn {
     background-color: var(--bg-medium);
     color: var(--text-primary);
