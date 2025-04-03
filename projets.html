@@ -2,172 +2,209 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mes projets</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets | Alexandre Magnier</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/loading.js"></script>
 </head>
 
 <body>
+    <div class="animated-background" id="code-background"></div>
+
     <header>
-        <img src="img/logo.png" alt="" style="width: 180px" />
-        <nav id="header-nav">
-            <a href="index.html" title="Accueil">Accueil</a>
-            <a href="projets.html" title="Projets">Projets</a>
-            <a href="https://www.linkedin.com/in/alexandre-magnier" target="_blank"><img src="img/linkedin.png" alt=""
-                    style="width: 25px" /></a>
-        </nav>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo AM" class="logo-img">
+                </div>
+                <nav id="header-nav">
+                    <a href="index.html">Accueil</a>
+                    <a href="projets.html" class="active">Projets</a>
+                    <a href="competences.html">Compétences</a>
+                    <a href="/img/cv-alexandre.pdf">CV</a>
+                    <a href="https://www.linkedin.com/in/alexandre-magnier" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/your-username" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <hr id="separator" />
-
-    <h1 class="title" style="display: flex; justify-content:center">Diverses projets dans 2 cadres différents...</h1>
-
-    <section>
-        <div class="projet-logo-p">
-            <img src="img/logo my digital school .png" alt="" style="width:250px;">
-            <p style="font-size: 20px; width: 80%; text-align: center;">Cela fait deux ans que je suis à MyDigitalSchool
-                et depuis j’ai pu mettre en pratique mes compétences en développement web.
-                Voici deux projets de développement web que j’ai pu réaliser :
-            </p>
-        </div>
-
-        <div class="projet-block">
-            <div class="align-block">
-                <img src="img/logo white hat.png" alt="" style="width:120px;">
-                <img class="img-width" src="img/projet-white-hat.png" alt="" style="padding-top: 0px;">
-                <p style=" line-height:1,15; font-size: 14px; text-align: justify;width: 80%;">
-                    Dans le cadre du module « Intégration Web », je devais réaliser avec les membres de mon groupe un
-                    site vitrine en HTML/CSS.
-                    Le sujet pour le contenu du site était libre et nous avons choisi de parler des White Hat, une
-                    organisation de hackers éthiques.
-                    Nous devions réaliser ce site dans le but de pratiquer les bases du HTML/CSS tels que :
-                    l’utilisation des balises sémantiques, les classes, les id,
-                    styliser son contenu, l’indentation du code , la navigation entre différentes pages, le responsive,
-                    l’utilisation de GitHub.
-                    Nous avons organisé notre projet pour travailler dans un premier temps sur le design du site
-                    (couleurs, typographie, textes, images).
-                    Nous avons pu ensuite réaliser une maquette afin de savoir parfaitement où placer notre contenu.
-                    Enfin nous avons tous développé une page.
-                    Je me suis occupé personnellement d’intégrer les parties les plus dures du code car j’étais celui
-                    qui était le plus à l’aise avec le code.
-                    J’étais chargé également d’envoyer l’avancement du projet sur GitHub. Vous pouvez retrouver le
-                    github de notre projet juste ici : <a href=""></a>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="section-title typing-effect"> Projets</h1>
+                <p class="section-description">
+                    Découvrez les différents projets sur lesquels j'ai travaillé,
+                    tant dans le cadre de ma formation à MyDigitalSchool que lors de mes stages professionnels.
                 </p>
-
-
             </div>
+        </section>
 
-            <div class="align-block">
-                <img src="img/logo mr doe.png" alt="" style="width:120px;">
-                <img class="img-width" src="img/projet-mr-doe.png" alt="" style="padding-top: 40px;">
-                <p style="line-height:1,15; font-size: 14px; text-align: justify;width: 80%;">
-                    Lors du module « Conception Wordpress », je devais une nouvelle fois réaliser un site vitrine en
-                    groupe.
-                    Comme le nom du module l’indique, je devais cette fois ci utiliser Wordpress pour développer ma
-                    page.
-                    Nous devions réaliser un site vitrine pour « Mr Doe » qui souhaitait mettre en location son logement
-                    en bord de mer. Ce site était un one page et devait contenir toutes les informations nécessaires
-                    pour que les potentiels clients aient les informations sur le logement et puissent réserver leur
-                    séjour.
-                    Ce projet avait pour but de nous familiariser avec Wordpress pour connaitre une autre façon de
-                    développer un site internet. Nous avons appris de ce fait à : lancer et configurer un projet
-                    Wordpress, utiliser un thème et des extensions, créer et gérer différentes pages, développer son
-                    site avec Elementor ou Gutenberg qui sont des extensions pour personnaliser son contenu.
-                    Nous avons réalisé une nouvelle fois une réflexion pour le design du site, ensuite une maquette et
-                    enfin nous avons procédé au développement.
-                    A la fin de ma première année, j’ai réalisé un stage chez IESI qui est une société de services
-                    informatiques.
-                    Durant celui-ci j’ai pu travailler sur deux gros projets de développement web qui contenaient une
-                    partie front et une partie back et ils allaient être réutilisés plus tard par l’entreprise.
-
-                </p>
-
-
-            </div>
-
-    </section>
-
-    <section>
-        <div class="projet-logo-p">
-            <img src="img/logo IESI.png" alt="" style="width:250px;">
-            <p style="font-size: 20px; width: 80%; text-align: center;">A la fin de ma première année, j’ai réalisé un
-                stage chez IESI qui est une société de services informatiques.
-                Durant celui-ci j’ai pu travailler sur deux gros projets de développement web
-                qui contenaient une partie front et une partie back et ils allaient être réutilisés plus tard par
-                l’entreprise:
-            </p>
-        </div>
-
-        <div class="projet-block">
-            <div class="align-block">
-                <div class="icon">
-                    <img src="img/python.png" alt="" style="width:50px">
-                    <img src="img/angular.jpg" alt="" style="width:50px">
-                    <img src="img/nest.png" alt="" style="width:50px">
+        <section class="projects-section">
+            <div class="container">
+                <div class="category-filter fade-in">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="formation">Formation MDS</button>
+                    <button class="filter-btn" data-filter="stage">Stage IESI</button>
+                    <button class="filter-btn" data-filter="perso">Projets Personnels</button>
                 </div>
-                <img class="img-width" src="img/sonde.png" alt="" style="padding-top: 20px;">
-                <p style=" line-height:1,15; font-size: 14px; text-align: justify;width: 80%;">
-                    Pour ce second projet, je devais développer dans un premier temps une sonde qui relève au même
-                    moment la ram et le stockage d’une machine puis dans un second temps une interface où les
-                    informations y allaient être affichées.
-                    La sonde allait être implantée sur des ordinateurs et le visuel allait être conservé.
-                    En effet, toutes les minutes, la sonde va être lancée sur la machine sur laquelle elle se trouve et
-                    va envoyer à chaque fois deux alertes à l’interface : une pour la ram et une pour le stockage.
-                    Chaque alerte comportera les données suivantes : nom de la machine, le type de l’alerte (soit ram ou
-                    stockage), la date et l’heure, la valeur de la ram ou du stockage exprimée en % , le restant, en %
-                    (indique la valeur restante avant que la ram ou le stockage atteigne le 100%), le seuil définit en %
-                    (que la ram ou le stockage ne doivent normalement pas dépasser ou de très peu) ,
-                    le statut indique si la valeur de l’alerte a dépassé le seuil. Ce projet a tout aussi été captivant
-                    car il m’a permis de travailler avec Python pour développer la sonde mais de réutiliser les
-                    frameworks Angular et Nest Js et l’API.
-                </p>
+
+                <div class="projects-grid">
+                    <div class="project-card fade-in" data-category="formation">
+                        <div class="project-image">
+                            <img src="img/projet-white-hat.png" alt="Projet White Hat">
+                        </div>
+                        <div class="project-info">
+                            <h3>White Hat</h3>
+                            <p>Site vitrine en HTML/CSS sur les hackers éthiques</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>GitHub</span>
+                            </div>
+                            <a href="details-projets/white-hat.html" class="btn small">Voir le projet</a>
+                        </div>
+                    </div>
+
+                    <!-- Projet Mr Doe -->
+                    <div class="project-card fade-in" data-category="formation">
+                        <div class="project-image">
+                            <img src="img/airbnb-1.png" alt="Airbnb">
+                        </div>
+                        <div class="project-info">
+                            <h3>Airbnb</h3>
+                            <p>Refonte de Airbnb</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>GitHub</span>
+                            </div>
+                            <a href="details-projets/airbnb.html" class="btn small">Voir le projet</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in" data-category="stage">
+                        <div class="project-image">
+                            <img src="img/sonde.png" alt="Projet Sonde">
+                        </div>
+                        <div class="project-info">
+                            <h3>Sonde de Monitoring</h3>
+                            <p>Application de suivi de performance avec Python, Angular et NestJS</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Angular</span>
+                                <span>NestJS</span>
+                            </div>
+                            <a href="./details-projets/sonde.html" class="btn small">Voir le projet</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in" data-category="stage">
+                        <div class="project-image">
+                            <img src="/img/cybersim-1.png" alt="Cybersim">
+                        </div>
+                        <div class="project-info">
+                            <h3>Cybersim</h3>
+                            <p>Tutorat avec les premières années sur la cybersécurité</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="/details-projets/cybersim.html" class="btn small">Voir le projet</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in" data-category="formation">
+                        <div class="project-image">
+                            <img src="/img/echoes-1.png" alt="Echoes">
+                        </div>
+                        <div class="project-info">
+                            <h3>Festival Echoes</h3>
+                            <p>Création d'un site pour un projet de festival du nom de "Echoes"</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="/details-projets/echoes.html" class="btn small">Voir le projet</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in" data-category="formation">
+                        <div class="project-image">
+                            <img src="/img/spotify-1.png" alt="Spotify">
+                        </div>
+                        <div class="project-info">
+                            <h3>Spotify</h3>
+                            <p>Refonte de Spotify avec système de niveaux</p>
+                            <div class="project-tech">
+                                <span>Laravel</span>
+
+                            </div>
+                            <a href="/details-projets/spotify.html" class="btn small">Voir le projet</a>
+                        </div>
+                    </div>
+                    <div class="project-card fade-in" data-category="formation">
+                        <div class="project-image">
+                            <img src="/img/film-1.png" alt="appli film">
+                        </div>
+                        <div class="project-info">
+                            <h3>Application de films</h3>
+                            <p>Création d'une application pour consulter des films sorties récemment</p>
+                            <div class="project-tech">
+                                <span>Laravel</span>
+
+                            </div>
+                            <a href="/details-projets/film.html" class="btn small">Voir le projet</a>
+                        </div>
+                    </div>
 
 
-            </div>
-
-            <div class="align-block">
-                <div class="icon">
-                    <img src="img/angular.jpg" alt="" style="width:50px;margin-left: 30px;">
-                    <img src="img/nest.png" alt="" style="width:50px">
                 </div>
-                <img class="img-width" src="img/atelier.png" alt="" style="padding-top: 20px;">
-                <p style="line-height:1,15; font-size: 14px; text-align: justify;width: 80%;">
-                    Mon premier projet consistait à développer une interface qui devait permettre au personnel d’IESI de
-                    consulter
-                    des « tickets » envoyés par ses clients. Les tickets permettent aux clients d’IESI d’exprimer leurs
-                    problèmes informatiques et
-                    ils sont envoyés grâce à une plateforme nommée « Apollo » (développé par IESI). Mon interface allait
-                    être relié à cette plateforme pour
-                    qu’elle reçoit à chaque fois les nouveaux tickets. Un ticket comprend plusieurs informations comme
-                    le nom de l’interlocuteur, le nom de la société,
-                    le numéro de téléphone, l’adresse mail, le résumé du problème. Ce projet m’a fait travailler un peu
-                    plus en détails sur la programmation orientée objet et
-                    surtout sur le framework Angular pour la partie front et sur le framework NestJS pour la partie
-                    back. J’ai également appris à manipuler une API qui permet
-                    d’interconnecter différentes parties d’un projet web. La complexité du projet m’a vraiment fait
-                    progresser en développement web car je m’efforçais à comprendre
-                    les notions difficiles. Ma capacité à travailler en équipe a été sollicité car je devais travailler
-                    avec un autre stagiaire sur ce projet.
-
-                </p>
-
-
             </div>
-
-
-    </section>
-
+        </section>
+    </main>
 
     <footer>
-        <img src="img/logo.png" alt="" style="width: 60px" />
-        <nav id="footer-nav">
-            <a href="index.html" title="Accueil">Accueil</a>
-            <a href="projets.html" title="Projets">Projets</a>
-        </nav>
-        <a href="https://www.linkedin.com/in/alexandre-magnier" target="_blank"><img src="img/linkedin.png" alt=""
-                style="width: 35px" /></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Logo AM" style="width: 40px;">
+                </div>
+                <nav id="footer-nav">
+                    <a href="index.html">Accueil</a>
+                    <a href="projets.html">Projets</a>
+                    <a href="competences.html">Compétences</a>
+                    <a href="/img/cv-alexandre.pdf">CV</a>
+                </nav>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/alexandre-magnier" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/your-username" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Alexandre Magnier. Tous droits réservés.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
