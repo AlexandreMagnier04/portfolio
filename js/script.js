@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
 
     initMenuMobile();
@@ -72,105 +71,6 @@ function initScrollAnimation() {
     });
 }
 
-function initProjectsCarousel() {
-    const projectsCarousel = document.querySelector('.projects-carousel');
-    if (projectsCarousel) {
-        const projectCards = projectsCarousel.querySelectorAll('.project-card');
-
-        if (projectCards.length > 1 && window.innerWidth > 768) {
-
-            try {
-                let slider = tns({
-                    container: '.projects-carousel',
-                    items: 1,
-                    slideBy: 'page',
-                    autoplay: false,
-                    controls: true,
-                    nav: false,
-                    controlsContainer: '.carousel-controls',
-                    prevButton: '.prev-btn',
-                    nextButton: '.next-btn',
-                    responsive: {
-                        576: {
-                            items: 2,
-                            gutter: 20
-                        },
-                        992: {
-                            items: 3,
-                            gutter: 30
-                        }
-                    },
-                    speed: 400,
-                    loop: true
-                });
-
-                slider.events.on('transitionStart', function () {
-                    const activeSlides = projectsCarousel.querySelectorAll('.tns-slide-active');
-                    activeSlides.forEach(slide => {
-                        slide.style.opacity = '1';
-                        slide.style.transform = 'scale(1)';
-                    });
-                });
-            } catch (e) {
-                console.warn('Tiny-slider not loaded or error:', e);
-
-                const carouselControls = document.querySelector('.carousel-controls');
-                if (carouselControls) {
-                    carouselControls.style.display = 'none';
-                }
-
-                projectCards.forEach(card => {
-                    card.style.width = '100%';
-                    card.style.margin = '10px 0';
-                });
-            }
-        } else {
-            const carouselControls = document.querySelector('.carousel-controls');
-            if (carouselControls) {
-                carouselControls.style.display = 'none';
-            }
-
-            projectCards.forEach(card => {
-                card.style.width = '100%';
-                card.style.margin = '10px 0';
-            });
-        }
-    }
-}
-
-function initScreenshotsCarousel() {
-    const screenshotsCarousel = document.querySelector('.screenshots-carousel');
-    if (screenshotsCarousel) {
-        try {
-            let screenshotSlider = tns({
-                container: '.screenshots-carousel',
-                items: 1,
-                slideBy: 'page',
-                autoplay: false,
-                controls: true,
-                nav: false,
-                controlsContainer: '.carousel-controls',
-                prevButton: '.prev-btn',
-                nextButton: '.next-btn',
-                responsive: {
-                    768: {
-                        items: 2,
-                        gutter: 20
-                    },
-                    992: {
-                        items: 1,
-                        gutter: 0,
-                        center: true
-                    }
-                },
-                speed: 400,
-                loop: true
-            });
-        } catch (e) {
-            console.warn('Error initializing screenshot carousel:', e);
-        }
-    }
-}
 
 function initProjectFilter() {
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -284,33 +184,6 @@ function initCodeBackground() {
             codeBackground.appendChild(line);
         }, 3000);
     }
-}
-
-
-function initTypingEffect() {
-    const typingElements = document.querySelectorAll('.typing-effect');
-    typingElements.forEach(element => {
-        const text = element.textContent.trim();
-        element.textContent = '';
-        element.style.borderRight = '0.1em solid var(--accent-light-blue)';
-        element.style.animation = 'blinkCursor 1s step-end infinite';
-
-        let i = 0;
-        const speed = 80;
-        const typing = setInterval(() => {
-            if (i < text.length) {
-                element.textContent += text.charAt(i);
-                i++;
-            } else {
-                clearInterval(typing);
-
-                setTimeout(() => {
-                    element.style.borderRight = 'none';
-                    element.style.animation = 'none';
-                }, 1000);
-            }
-        }, speed);
-    });
 }
 
 
@@ -478,3 +351,68 @@ function addAnimationStyles() {
 }
 
 addAnimationStyles();
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const headerNav = document.getElementById('header-nav');
+
+    if (menuToggle && headerNav) {
+        menuToggle.addEventListener('click', function () {
+            headerNav.classList.toggle('active');
+        });
+    }
+});
+
+function typeWriter(element, speed = 100, pauseAfterEnd = 2000) {
+    const fullText = element.dataset.fulltext;
+    let i = 0;
+
+    // Commence en laissant l'élément vide
+    element.innerHTML = '<span class="cursor">|</span>';
+
+    function typing() {
+        if (i < fullText.length) {
+            const visibleText = fullText.substring(0, i + 1);
+            element.innerHTML = visibleText + '<span class="cursor">|</span>';
+            i++;
+            setTimeout(typing, speed);
+        } else {
+            // Animation terminée : enlever le curseur après un délai
+            setTimeout(() => {
+                element.innerHTML = fullText;
+            }, pauseAfterEnd);
+        }
+    }
+    
+    typing(); // Lance l'animation
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const h1 = document.querySelector('h1');
+    if (h1 && h1.dataset.fulltext) {
+        typeWriter(h1, 100); // Lance avec 100ms entre chaque lettre
+    }
+});
+
+function initProjectsCarousel() {
+    const container = document.querySelector('.projects-carousel');
+    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+
+    if (!container || !nextBtn || !prevBtn) return;
+
+    const scrollAmount = container.offsetWidth;
+
+    nextBtn.addEventListener('click', () => {
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    // Optionnel : autoplay toutes les 5 sec
+    setInterval(() => {
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }, 5000);
+}

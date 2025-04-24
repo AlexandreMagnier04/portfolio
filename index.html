@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexandre Magnier | Développeur Web</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-
     <script src="js/loading.js"></script>
+  
+
 </head>
 
 <body>
@@ -47,7 +45,7 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1> Alexandre Magnier  </h1>
+                    <h1 data-fulltext="Alexandre Magnier"></h1>
                     <h2>Développeur Web</h2>
                     <p class="subtitle">Étudiant en Bachelor Cycle Web et Multimédia à MyDigitalSchool Lille</p>
                     <div class="cta-buttons">
@@ -106,8 +104,7 @@
                                     </div>
                                     <div class="skill-item">
                                         <img src="img/wordpress.png" alt="worr">
-                                        <span
-                                        >WordPress</span>
+                                        <span>WordPress</span>
                                     </div>
                                 </div>
                             </div>
@@ -145,7 +142,7 @@
                         </div>
                         <div class="project-card">
                             <div class="project-image">
-                                <img src="img/airbnb-1.png" alt="Airbnb">
+                                <img src="img/refont-airbnb-1.png" alt="ReAirbnb">
                             </div>
                             <div class="project-info">
                                 <h3>Airbnb</h3>
@@ -156,7 +153,7 @@
                                     <span>JavaScript</span>
                                     <span>GitHub</span>
                                 </div>
-                                <a href="details-projets/airbnb.html" class="btn small">Voir le projet</a>
+                                <a href="details-projets/refont-airbnb.html" class="btn small">Voir le projet</a>
                             </div>
                         </div>
                         <div class="project-card">
@@ -170,6 +167,7 @@
                                     <span>Python</span>
                                     <span>Angular</span>
                                     <span>NestJS</span>
+                                    <span>Stage IESI</span>
                                 </div>
                                 <a href="./details-projets/sonde.html" class="btn small">Voir le projet</a>
                             </div>
@@ -235,20 +233,23 @@
                         </div>
                         <div class="project-card">
                             <div class="project-image">
-                                <img src="/img/spotify-1.png" alt="Spotify">
+                                <img src="/img/refont-spotify-1.png" alt="Refont Spotify">
                             </div>
                             <div class="project-info">
-                                <h3>Spotify</h3>
+                                <h3>Refont Spotify</h3>
                                 <p>Refonte de Spotify avec système de niveaux</p>
                                 <div class="project-tech">
                                     <span>Laravel</span>
 
                                 </div>
-                                <a href="/details-projets/spotify.html" class="btn small">Voir le projet</a>
+                                <a href="/details-projets/refont-spotify.html" class="btn small">Voir le projet</a>
                             </div>
                         </div>
                     </div>
-            
+                    <div class="carousel-controls">
+                        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
                 </div>
                 <div class="view-all-projects">
                     <a href="projets.html" class="btn primary">Voir tous mes projets</a>
@@ -303,8 +304,7 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
